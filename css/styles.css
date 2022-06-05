@@ -366,7 +366,7 @@ body {
 
 /*------------------- кнопка -------------------*/
 .button-zakaz {
-  display: inline-block;
+  display: inline-flex;
   min-width: 200px;
   height: 50px;
   padding: 10px 32px;
@@ -377,6 +377,7 @@ body {
   line-height: 1.88;
   align-items: center;
   text-align: center;
+  cursor: pointer;
   letter-spacing: 0.06em;
 
   box-shadow: var(--box-shadow-buttom-studio);
@@ -399,6 +400,28 @@ body {
 .title-list > .special-item {
   margin-left: var(--box-cards-gap);
   flex-basis: calc(100% / 4 - var(--box-cards-gap));
+}
+.special-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+  background-color: var(--background-buttom);
+}
+.icon-antenna::before {
+  background-image: url();
+}
+.icon-clock::before {
+  background-image: url();
+}
+.icon-diagram::before {
+  background-image: url();
+}
+.icon-astronaut::before {
+  background-image: url();
 }
 .special-big {
   margin-bottom: 10px;
@@ -486,13 +509,27 @@ body {
   color: var(--primary-text-color);
 }
 .teamtext-small {
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
 
   color: var(--second-text-color);
 }
+/* -------------- Постоянные клиенты ----------------*/
+.post-text {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 
+  color: var(--primary-text-color);
+}
+.client {
+}
+.client-item {
+}
 /*--------------- підвал ------------*/
 .footer {
   padding: 60px 0;
