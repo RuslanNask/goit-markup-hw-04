@@ -329,12 +329,13 @@ body {
 
 /*------------------- css index --------------*/
 
-/* -------------- ефективне рішення --------------*/
+/* -------------- H E R O --------------*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
   background-color: var(--background-efect);
+  background-image: url('../images/hero.jpg');
 }
 .hero-text {
   margin: 0 auto;
