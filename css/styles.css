@@ -48,6 +48,8 @@
   --footer-text: rgba(255, 255, 255, 0.6);
   --footer-text-color: #ffffff;
   --border-line: 1px solid #ececec;
+  --hero-background: #c4c4c4;
+  --hero-bcg-overlay: rgba(47, 48, 58, 0.4);
 }
 /* html {
   box-sizing: border-box;
@@ -329,13 +331,25 @@ body {
 
 /*------------------- css index --------------*/
 
-/* -------------- H E R O --------------*/
+/* ------------------ H E R O ----------------*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
   background-color: var(--background-efect);
-  background-image: url('../images/hero.jpg');
+}
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(to right, var(--hero-bcg-overlay), var(--hero-bcg-overlay)),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--hero-background);
 }
 .hero-text {
   margin: 0 auto;
@@ -350,7 +364,7 @@ body {
   color: var(--accent-color-text);
 }
 
-/*------------ кнопка -------------*/
+/*------------------- кнопка -------------------*/
 .button-zakaz {
   display: inline-block;
   min-width: 200px;
