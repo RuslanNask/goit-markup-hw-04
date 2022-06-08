@@ -168,14 +168,10 @@ body {
   margin-left: auto;
   align-items: center;
 }
-.icon-mail {
-  /* width: 16px; */
-  /* height: 12px; */
-  /* margin-right: 10px; */
-}
+
 .headermail,
 .headertel {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 32px 0;
   cursor: pointer;
@@ -188,7 +184,6 @@ body {
 .header-icon {
   fill: currentColor;
 }
-
 .headermail:hover,
 .headermail:focus {
   color: var(--accent-color);
@@ -584,15 +579,6 @@ body {
 
   color: var(--primary-text-color);
 }
-/* .client {
-  display: flex;
-  justify-content: center;
-} */
-/* .client-item {
-  width: 170px;
-  height: 92px;
-} */
-
 .client {
   display: flex;
   flex-wrap: wrap;
@@ -624,13 +610,10 @@ body {
 }
 /*--------------- підвал ------------*/
 .footer {
-  padding: 60px 0;
-
   background: var(--footerbackground-color);
 }
 .footer .conteiner {
   display: flex;
-  flex-direction: column;
 }
 .footer-logo {
   margin-bottom: 20px;
@@ -646,7 +629,6 @@ body {
   color: var(--accent-color-text);
 }
 .footer-address {
-  display: flex;
   font-style: inherit;
 }
 .footer-item:not(:last-child) {
@@ -695,18 +677,24 @@ body {
 .footer-soc-link:focus {
   background-color: var(--accent-color);
 }
+.footer-primery {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+}
+.footer-secondary {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 0px 100px;
+  align-items: start;
+  margin-left: 70px;
+  padding-bottom: 100px;
+}
 .footer-text {
   margin-bottom: 20px;
-  text-align: center;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--accent-color-text);
-}
-.footer-secondary {
-  display: flex;
-  flex-direction: column;
-  margin-left: 70px;
-  padding-bottom: 100px;
 }
