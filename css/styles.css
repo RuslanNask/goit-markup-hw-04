@@ -52,6 +52,7 @@
   --hero-bcg-overlay: rgba(47, 48, 58, 0.4);
   --icon-text: #afb1b8;
   --icon-bgound-footer: rgba(255, 255, 255, 0.1);
+  --post-client-border-color: #afb1b8;
 }
 /* html {
   box-sizing: border-box;
@@ -572,9 +573,43 @@ body {
 
   color: var(--primary-text-color);
 }
+/* .client {
+  display: flex;
+  justify-content: center;
+} */
+/* .client-item {
+  width: 170px;
+  height: 92px;
+} */
+
 .client {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--box-cards-gap));
 }
-.client-item {
+.client > .client-item {
+  margin-left: var(--box-cards-gap);
+  flex-basis: calc(100% / 6 - var(--box-cards-gap));
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--post-client-border-color);
+  border-radius: 4px;
+  color: var(--icon-text);
+}
+.client-icon {
+  fill: currentColor;
+}
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
 }
 /*--------------- підвал ------------*/
 .footer {
