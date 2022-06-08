@@ -50,6 +50,7 @@
   --border-line: 1px solid #ececec;
   --hero-background: #c4c4c4;
   --hero-bcg-overlay: rgba(47, 48, 58, 0.4);
+  --icon-text: #afb1b8;
 }
 /* html {
   box-sizing: border-box;
@@ -412,16 +413,16 @@ body {
   background-color: var(--background-buttom);
 }
 .icon-antenna::before {
-  background-image: url();
+  background-image: url(../images/antenna\ 1.svg);
 }
 .icon-clock::before {
-  background-image: url();
+  background-image: url(../images/clock\ 1.svg);
 }
 .icon-diagram::before {
-  background-image: url();
+  background-image: url(../images/diagram\ 1.svg);
 }
 .icon-astronaut::before {
-  background-image: url();
+  background-image: url(../images/astronaut\ 1.svg);
 }
 .special-big {
   margin-bottom: 10px;
@@ -509,13 +510,57 @@ body {
   color: var(--primary-text-color);
 }
 .teamtext-small {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
 
   color: var(--second-text-color);
 }
+.masters-soc {
+  display: flex;
+  justify-content: center;
+}
+.masters-soc-item {
+  width: 44px;
+  height: 44px;
+  margin-left: 10px;
+}
+.masters-soc-item:first-child {
+  margin-left: 0;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--accent-color-text);
+  color: var(--icon-text);
+}
+.soc-icon {
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--accent-color-text);
+}
+
+/* ----------- або такий варіант ------------------- */
+/* .soc-icon {
+  fill: var(--icon-text);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-link:hover .soc-icon,
+.social-link:focus .soc-icon {
+  fill: var(--accent-color-text);
+} */
+
 /* -------------- Постоянные клиенты ----------------*/
 .post-text {
   margin-bottom: 50px;
@@ -536,9 +581,13 @@ body {
 
   background: var(--footerbackground-color);
 }
+.footer .conteiner {
+  display: flex;
+  flex-direction: column;
+}
 .footer-logo {
-  display: inline-block;
   margin-bottom: 20px;
+  max-width: 145px;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -550,6 +599,8 @@ body {
   color: var(--accent-color-text);
 }
 .footer-address {
+  display: flex;
+  max-width: 231px;
   font-style: inherit;
 }
 .footer-item:not(:last-child) {
@@ -568,4 +619,23 @@ body {
   letter-spacing: 0.03em;
   color: var(--footer-text);
   text-decoration: none;
+}
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-secondary {
+  /* display: flex; */
+  /* flex-direction: column; */
+  max-width: 206px;
+  margin-right: 70px;
+}
+.footer-text {
+  display: flex;
+  /* margin-left: 156px; */
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--accent-color-text);
 }
