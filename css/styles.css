@@ -184,6 +184,7 @@ body {
   color: var(--second-text-color);
 }
 .header-icon {
+  margin-right: 10px;
   fill: currentColor;
 }
 .headermail:hover,
