@@ -37,13 +37,15 @@
   --box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --box-shadow-buttom-studio: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  --box-shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  --box-shadow-ourteam: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   --border-radius-card-team: 0px 0px 4px 4px;
   --background-color: #ffffff;
   --background-box: #ffffff;
   --background-img-team: #ffffff;
   --border-card-project-line: 1px solid #eeeeee;
+  --box-shadow-card-project: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
   --footerbackground-color: #2f303a;
   --footer-text: rgba(255, 255, 255, 0.6);
   --footer-text-color: #ffffff;
@@ -222,21 +224,19 @@ body {
 
   color: var(--primary-text-color);
 }
+.buttons:hover,
+.buttons:focus {
+  box-shadow: var(--box-shadow);
+  color: var(--accent-color-text);
+  background-color: var(--background-buttom-accent);
+}
 .vse {
   min-width: 73px;
   height: 38px;
   border: 0px solid transparent;
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-accent);
-  cursor: pointer;
-  box-shadow: var(--box-shadow);
-}
-.vse:hover,
-.vse:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-accent);
 }
 .vse:active {
+  box-shadow: var(--box-shadow);
   color: var(--accent-color-text);
   background-color: var(--background-buttom-accent);
 }
@@ -246,21 +246,12 @@ body {
   cursor: pointer;
   border: 1px;
 }
-.web:hover,
-.web:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-accent);
-}
+
 .pril {
   min-width: 145px;
   height: 38px;
   cursor: pointer;
   border: 1px;
-}
-.pril:hover,
-.pril:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-accent);
 }
 .diz {
   min-width: 103px;
@@ -268,21 +259,11 @@ body {
   cursor: pointer;
   border: 1px;
 }
-.diz:hover,
-.diz:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-accent);
-}
 .market {
   min-width: 130px;
   height: 38px;
   cursor: pointer;
   border: 1px;
-}
-.market:hover,
-.market:focus {
-  color: var(--accent-color-text);
-  background-color: var(--background-buttom-accent);
 }
 
 /* ------------ PROJECT - SITKA -----------*/
@@ -299,6 +280,9 @@ body {
 
   background: var(--background-box);
   border: var(--border-card-project-line);
+}
+.box-cards:hover {
+  box-shadow: var(--box-shadow-card-project);
 }
 /*------- або ---- PROJECT - SITKA ----- по-іншому --------*/
 /* .project {
@@ -503,7 +487,7 @@ body {
 
 .card {
   border-radius: var(--border-radius-card-team);
-  box-shadow: var(--box-shadow-team);
+  box-shadow: var(--box-shadow-ourteam);
 }
 .card-content {
   text-align: center;
