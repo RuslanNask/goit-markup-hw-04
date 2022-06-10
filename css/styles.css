@@ -213,16 +213,18 @@ body {
   display: flex;
   margin-right: 8px;
   margin-bottom: 50px;
-  padding: 6px 22px;
   border-radius: 4px;
   justify-content: center;
+}
+.buttons {
+  margin-bottom: 0;
+  padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   cursor: pointer;
-
+  border: 0px solid transparent;
   color: var(--primary-text-color);
 }
 .buttons:hover,
@@ -231,40 +233,10 @@ body {
   color: var(--accent-color-text);
   background-color: var(--background-buttom-accent);
 }
-.vse {
-  min-width: 73px;
-  height: 38px;
-  border: 0px solid transparent;
-}
-.vse:active {
+.buttons:active {
   box-shadow: var(--box-shadow);
   color: var(--accent-color-text);
   background-color: var(--background-buttom-accent);
-}
-.web {
-  min-width: 128px;
-  height: 38px;
-  cursor: pointer;
-  border: 1px;
-}
-
-.pril {
-  min-width: 145px;
-  height: 38px;
-  cursor: pointer;
-  border: 1px;
-}
-.diz {
-  min-width: 103px;
-  height: 38px;
-  cursor: pointer;
-  border: 1px;
-}
-.market {
-  min-width: 130px;
-  height: 38px;
-  cursor: pointer;
-  border: 1px;
 }
 
 /* ------------ PROJECT - SITKA -----------*/
@@ -282,7 +254,8 @@ body {
   background: var(--background-box);
   border: var(--border-card-project-line);
 }
-.box-cards:hover {
+.box-cards:hover,
+.box-cards:focus {
   box-shadow: var(--box-shadow-card-project);
 }
 /*------- або ---- PROJECT - SITKA ----- по-іншому --------*/
@@ -399,7 +372,7 @@ body {
   display: block;
   content: '';
   height: 120px;
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 30px;
@@ -576,6 +549,7 @@ body {
 
 .client-link {
   display: flex;
+  outline: transparent;
   align-items: center;
   justify-content: center;
   width: 170px;
@@ -599,8 +573,10 @@ body {
 }
 .footer .conteiner {
   display: flex;
+  align-items: baseline;
 }
 .footer-logo {
+  display: flex;
   margin-bottom: 20px;
   max-width: 145px;
   font-family: 'Raleway';
@@ -663,19 +639,13 @@ body {
   background-color: var(--accent-color);
 }
 .footer-primery {
-  display: flex;
-  flex-direction: column;
   padding: 60px 0;
 }
 .footer-secondary {
-  display: flex;
-  flex-direction: column;
-  padding: 72px 0px 100px;
-  align-items: start;
   margin-left: 70px;
-  padding-bottom: 100px;
 }
 .footer-text {
+  display: block;
   margin-bottom: 20px;
   line-height: 1.14;
   letter-spacing: 0.03em;
