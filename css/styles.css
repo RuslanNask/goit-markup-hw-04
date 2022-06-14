@@ -254,8 +254,11 @@ body {
   background: var(--background-box);
   border: var(--border-card-project-line);
 }
-.box-cards:hover,
-.box-cards:focus {
+.box-cards .link {
+  display: block;
+}
+.box-cards .link:hover,
+.box-cards .link:focus {
   box-shadow: var(--box-shadow-card-project);
 }
 /*------- або ---- PROJECT - SITKA ----- по-іншому --------*/
